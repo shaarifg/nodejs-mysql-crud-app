@@ -1,1 +1,3 @@
-## NodeJs CRUD app with MySQL and (sequelize)
+## NodeJs CRUD application with MySQL and sequelize
+
+~Mohd Sharif
