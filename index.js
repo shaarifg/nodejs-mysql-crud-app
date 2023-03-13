@@ -1,13 +1,14 @@
 const express = require("express");
 require("./db");
+const userRouter = require("./routes/user.routes");
 const { userModel, bookModel } = require("./models");
-// const User = require("./models");
-console.log(userModel, bookModel);
 
 const app = express();
+app.use(express.json());
+app.use("/", userRouter);
 
 userModel.sync();
-// bookModel.sync();
+bookModel.sync();
 
 app.listen(8080, () => {
   console.log(`server is running`);
