@@ -4,9 +4,9 @@ import "./addbook.css";
 
 const AddBook = () => {
   const [formData, setFormData] = useState({
-    bookname: "",
+    name: "",
     author: "",
-    price: "",
+    price: null,
     coverurl: "",
     genre: "",
   });
@@ -34,13 +34,13 @@ const AddBook = () => {
       <form>
         <div className="row">
           <div className="col-25">
-            <label htmlFor="bookname">Book Name</label>
+            <label htmlFor="name">Book Name</label>
           </div>
           <div className="col-75">
             <input
               type="text"
-              id="bookname"
-              name="bookname"
+              id="name"
+              name="name"
               placeholder="Enter book name..."
               onChange={handleChange}
             />

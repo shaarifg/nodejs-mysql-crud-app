@@ -5,11 +5,14 @@ import AddBook from "./AddBook";
 const Books = () => {
   const [books, setBooks] = useState([]);
 
-  useEffect(async () => {
-    await axios.get(`http://localhost:8080/books`).then((data) => {
-      console.log(data);
-    });
-  });
+  useEffect(() => {
+    async function getBooks() {
+      const res = await axios.get(`http://localhost:8080/books`);
+      console.log(res);
+      setBooks(res.data);
+    }
+    getBooks();
+  }, [0]);
   return <AddBook />;
 };
 
