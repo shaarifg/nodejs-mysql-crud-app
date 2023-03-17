@@ -1,9 +1,15 @@
-import React, { useEffect } from "react";
-import { fetchBooks } from "../data/fetchBooks";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import AddBook from "./AddBook";
 
 const Books = () => {
-  useEffect(() => {});
+  const [books, setBooks] = useState([]);
+
+  useEffect(async () => {
+    await axios.get(`http://localhost:8080/books`).then((data) => {
+      console.log(data);
+    });
+  });
   return <AddBook />;
 };
 

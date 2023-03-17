@@ -3,7 +3,7 @@ import "./signin.css";
 const SignUp = () => {
   return (
     <div className="container">
-      <h1>Sign In</h1>
+      <h1>Sign Up</h1>
       <form>
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" name="name" required />
